@@ -2,7 +2,8 @@
 #include <cmath>
 #define ArraySize 5
 using namespace std;
-class Array {
+class Array
+{
 public:
     int** Arr = new int*[ArraySize];
 
@@ -10,12 +11,12 @@ public:
     void OutputArray(int** Arr);
     void InsertSortColumnsIncr(int** Arr);
     void SumLinesOverMain(int** Arr);
-    void GeometricAmount(int** Arr,int geom);
+    void GeometricMean(int** Arr,int product);
 };
 
 int main()
 {
-    int geom;
+    int product;
     int** Arr = new int*[ArraySize];
     for (int i = 0; i < ArraySize; i++)
     {
@@ -29,10 +30,10 @@ int main()
     cout << "\nVidsortovana matryzia\n";
     A.OutputArray(Arr);
     A.SumLinesOverMain(Arr);
-    A.GeometricAmount(Arr,geom);
-
-
+    A.GeometricMean(Arr,product);
+    system("pause");
 }
+//Функція вводу матриці
 void Array::InputArray(int** Arr)
 {
     for (int i = 0; i < ArraySize; ++i)
@@ -42,22 +43,26 @@ void Array::InputArray(int** Arr)
             cout << "Enter [" << i + 1 << "]" << "[" << j + 1 << "]:";
             cin >> Arr[i][j];
         }
-
     }
 }
-void Array::OutputArray(int** Arr){
+//Функція виведення матриці
+void Array::OutputArray(int** Arr)
+{
     cout << "\n";
     for (int i = 0; i < ArraySize; ++i)
     {
         for (int j = 0; j < ArraySize; ++j)
         {
             cout << Arr[i][j] << " ";
-        }   cout << "\n";
+        }
+        cout << "\n";
     }
     cout << "\n\n";
 
 }
-void Array :: InsertSortColumnsIncr (int** Arr){
+// Сортування елементів стовпців матриці за зростанням їх значень методом вставки
+void Array :: InsertSortColumnsIncr (int** Arr)
+{
     int value, memory;
     for (int k = 0; k < ArraySize; k++)
         for (int i = 1; i < ArraySize; i++)
@@ -74,7 +79,9 @@ void Array :: InsertSortColumnsIncr (int** Arr){
             Arr[memory][k] = value;
         }
 }
-void Array::SumLinesOverMain(int** Arr) {
+//Функція розрахунку суми елементів рядка над головною діагоналлю
+void Array::SumLinesOverMain(int** Arr)
+{
     double product = 1;
     for (int i = 0; i<(ArraySize-1); i++)
     {
@@ -88,7 +95,13 @@ void Array::SumLinesOverMain(int** Arr) {
     }
     cout << "\n\n";
 }
-void Array ::GeometricAmount(int** Arr,int product) {
+//Функція знаходження середнього геометричного сум
+void Array::GeometricMean(int** Arr,int product)
+{
     double geometric = pow(product, 1 * 1.0 / 4);
     cout << "Serednie geometrychne = " << geometric;
 }
+
+
+
+
