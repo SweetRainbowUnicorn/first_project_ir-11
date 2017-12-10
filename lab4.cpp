@@ -31,7 +31,6 @@ int main()
     A.OutputArray(Arr);
     A.SumLinesOverMain(Arr);
     A.GeometricMean(Arr,product);
-    system("pause");
 }
 //Функція вводу матриці
 void Array::InputArray(int** Arr)
