@@ -32,7 +32,7 @@ int main()
     A.SumLinesOverMain(Arr);
     A.GeometricMean(Arr,product);
 }
-//Функція вводу матриці
+//Р¤СѓРЅРєС†С–СЏ РІРІРѕРґСѓ РјР°С‚СЂРёС†С–
 void Array::InputArray(int** Arr)
 {
     for (int i = 0; i < ArraySize; ++i)
@@ -44,7 +44,7 @@ void Array::InputArray(int** Arr)
         }
     }
 }
-//Функція виведення матриці
+//Р¤СѓРЅРєС†С–СЏ РІРёРІРµРґРµРЅРЅСЏ РјР°С‚СЂРёС†С–
 void Array::OutputArray(int** Arr)
 {
     cout << "\n";
@@ -59,7 +59,7 @@ void Array::OutputArray(int** Arr)
     cout << "\n\n";
 
 }
-// Сортування елементів стовпців матриці за зростанням їх значень методом вставки
+// РЎРѕСЂС‚СѓРІР°РЅРЅСЏ РµР»РµРјРµРЅС‚С–РІ СЃС‚РѕРІРїС†С–РІ РјР°С‚СЂРёС†С– Р·Р° Р·СЂРѕСЃС‚Р°РЅРЅСЏРј С—С… Р·РЅР°С‡РµРЅСЊ РјРµС‚РѕРґРѕРј РІСЃС‚Р°РІРєРё
 void Array :: InsertSortColumnsIncr (int** Arr)
 {
     int value, memory;
@@ -78,7 +78,7 @@ void Array :: InsertSortColumnsIncr (int** Arr)
             Arr[memory][k] = value;
         }
 }
-//Функція розрахунку суми елементів рядка над головною діагоналлю
+//Р¤СѓРЅРєС†С–СЏ СЂРѕР·СЂР°С…СѓРЅРєСѓ СЃСѓРјРё РµР»РµРјРµРЅС‚С–РІ СЂСЏРґРєР° РЅР°Рґ РіРѕР»РѕРІРЅРѕСЋ РґС–Р°РіРѕРЅР°Р»Р»СЋ
 void Array::SumLinesOverMain(int** Arr)
 {
     double product = 1;
@@ -94,7 +94,7 @@ void Array::SumLinesOverMain(int** Arr)
     }
     cout << "\n\n";
 }
-//Функція знаходження середнього геометричного сум
+//Р¤СѓРЅРєС†С–СЏ Р·РЅР°С…РѕРґР¶РµРЅРЅСЏ СЃРµСЂРµРґРЅСЊРѕРіРѕ РіРµРѕРјРµС‚СЂРёС‡РЅРѕРіРѕ СЃСѓРј
 void Array::GeometricMean(int** Arr,int product)
 {
     double geometric = pow(product, 1 * 1.0 / 4);
